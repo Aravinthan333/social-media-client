@@ -4,6 +4,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import AppLayout from "./layouts/AppLayout";
+import Chat from "./pages/Chat";
+import EmailVerification from "./pages/EmailVerification";
 
 function App() {
   return (
@@ -17,8 +19,22 @@ function App() {
             </AppLayout>
           }
         />
-        <Route path="/register" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
+
+        <Route
+          path="/chat"
+          element={
+            <AppLayout>
+              <Chat />
+            </AppLayout>
+          }
+        />
+
+        <Route path="/signup" element={<Signup />} />
+
+        <Route path="/verify-email" element={<EmailVerification />} />
+
+        <Route path="/signin" element={<Login />} />
+
         <Route
           path="/profile"
           element={
